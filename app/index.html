@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://cdn.glitch.global/9a74d926-21a4-4f75-a75e-90325bd155b7/dli_favicon.png?v=1650584187278" />
+    <title>Do You Remember</title>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+    <!-- import the webpage's javascript file -->
+    <script src="/script.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  
+  <body>
+    <!-- this is the start of content -->
+    <h1 id="title">
+      ~Do You Remember~ 
+    </h1>
+    <div id="userText">
+      <p id="t1">
+        Welcome to a light and sound memory Game!   
+      </p>
+      <p id="t2">
+        Repeat back a light and sound pattern by pressing buttons within a timeframe of 10 seconds.   
+      </p>
+      <p id="t3">
+        You will have three chances to get the pattern correctly.  
+      </p>
+      <p id="t4">
+      Press start to choose your difficulty! 
+      </p>
+    </div>
+    
+    <p id="mistakes" class="hidden">
+      Mistakes: 0/3
+    </p>
+    
+    <p id="score" class="hidden">
+      Score: 0
+    </p>
+    
+    <p id="timer" class="hidden">
+      Timer: 10
+    </p>
+    
+    <p></p>
+    
+    <div id="buttons">
+      <button id="startBtn" onclick="difficultySelect()">Start</button>
+      <div id="difficultyButtons" class="hidden">
+        <button id="easy" onclick="startGame(4)">Easy</button>
+        <p></p>
+        <button id="medium" onclick="startGame(5)">Medium</button>
+        <p></p>
+        <button id="hard" onclick="startGame(6)">Hard</button>  
+      </div>
+      
+      <button id="stopBtn" class="hidden" onclick="stopGame()">Stop</button>
+      
+    </div>
+    
+    <script>
+      $("document").ready(function () {
+        $("#title").hide();
+        $("#t1").hide();
+        $("#t1").hide();
+        $("#t2").hide();
+        $("#t3").hide();
+        $("#t4").hide();
+        $("#startBtn").hide();
+        $("document").ready(function(){
+          $('#title').delay(1000).fadeIn(1500).delay(5000, function(){
+            $("#t1").fadeIn(1500).delay(10000, function () {
+              $("#t2").fadeIn(1500).delay(10000, function () {
+                $("#t3").fadeIn(1500).delay(10000, function(){
+                  $("#t4").fadeIn(1500).delay(10000, function(){
+                    $("#startBtn").fadeIn(1000);    
+                  });  
+                });
+              });
+            }); 
+          });  
+        });
+      });
+    </script>
+    
+    <p></p>
+    
+    <div id="gameButtonArea" class="hidden">
+      <button id="button1" onclick="guess(1), playTone(1, 250)">
+        <img src="https://cdn.glitch.global/9a74d926-21a4-4f75-a75e-90325bd155b7/turtle.png?v=1650557437977">
+      </button>
+      <button id="button2" onclick="guess(2), playTone(5, 250)">
+        <img src="https://cdn.glitch.global/9a74d926-21a4-4f75-a75e-90325bd155b7/penguin.png?v=1650557437965">
+      </button>
+      <button id="button3" onclick="guess(3), playTone(9, 250)">
+        <img src="https://cdn.glitch.global/9a74d926-21a4-4f75-a75e-90325bd155b7/cat.png?v=1650556255143">
+      </button>
+      <button id="button4" onclick="guess(4), playTone(13, 250)">
+        <img src="https://cdn.glitch.global/9a74d926-21a4-4f75-a75e-90325bd155b7/dragon.png?v=1650557437931">
+      </button>
+      <button id="button5" onclick="guess(5), playTone(17, 250)">
+        <img src="https://cdn.glitch.global/9a74d926-21a4-4f75-a75e-90325bd155b7/bird.png?v=1650557437830">
+      </button>
+      <button id="button6" onclick="guess(6), playTone(21, 250)">
+        <img src="https://cdn.glitch.global/9a74d926-21a4-4f75-a75e-90325bd155b7/fox.png?v=1650557437830">
+      </button>
+    </div>
+    
+
+  </body>
+</html>
