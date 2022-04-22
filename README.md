@@ -8,7 +8,9 @@ Time spent (required functionality): **1.5** hours spent
 
 Time spent (optional + additional features): **8** hours spent 
 
-Link to project: (insert your link here, should start with https://glitch.com...)
+Link to project: https://glitch.com/edit/#!/dli-fftl-prework
+
+Viewable here: https://dli-fftl-prework.glitch.me/
 
 ## Required Functionality
 
