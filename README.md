@@ -124,7 +124,7 @@ In order to implement these various functionalities, I would attempt to refactor
 
 ## Interview Recording URL Link
 
-[My 5-minute Interview Recording](your-link-here)
+[My 5-minute Interview Recording](https://youtu.be/1Oj_pukEo7w)
 
 
 ## License
